@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    include '../Drakuze-Profile/upload.php';
-    echo $img;
-?>
+    require "../Drakuze-Profile/upload.php";
+    $img = $_FILES["fileToUpload"]["name"];
+    ?>
 
 <!DOCTYPE html>
 <html lang="nl">
@@ -48,7 +48,7 @@
         <article>
             <h1>🌻 Pikmin Bloom is uit</h1>
             <figure>
-                <img src="../Drakuze-Profile/uploads/<?php  ?>" alt="k">
+                <img src="../Drakuze-Profile/uploads/<?php print($img); ?>" alt="">
                 <figcaption>
                     🌱 Pikmin zijn kleine vrolijke wezens,
                     kleur de hele wereld tot een mooie tuin!
